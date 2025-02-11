@@ -1,0 +1,124 @@
+main{
+    margin: 5vw 10vw;
+    @media screen and (max-width: 800px) {
+        margin: 5vw 7vw;
+    }
+    @media screen and (max-width: 500px) {
+        margin: 5vw 3vw;
+    }
+    h2{
+        font-size: 28px;
+        font-weight: 500;
+        text-transform: uppercase;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        @media screen and (max-width: 500px) {
+            font-size: 22px;
+        }
+    }
+}
+
+.container{
+    margin-bottom: 50px;
+    transition: .8s;
+    &__apps{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1em;
+        padding: 30px;
+        transition: .4s;
+        overflow: hidden;
+        height: 100%;
+        max-height: 1000px;
+        @media screen and (max-width: 700px) {
+            justify-content: center;
+            max-height: 2000px;
+        }
+        @media screen and (max-width: 500px) {
+            gap: 0.7em;
+        }
+    }
+
+    &__university{
+        h2{
+            color: $university;
+            &::after{
+                content: '';
+                display: block;
+                width: 100%;
+                height: 1px;
+                background: #d2d2d2;
+                margin-top: 16px;
+            }
+            @media screen and (max-width: 500px) {
+                text-align: center;
+            }
+        }
+        .bloc{
+            background: $university;
+        }
+    }
+
+    &__iut{
+        h2{
+            color: $iut;
+            cursor: pointer;
+            &::after{
+                content: '';
+                display: block;
+                width: 100%;
+                height: 1px;
+                background: #d2d2d2;
+                margin-top: 16px;
+            }
+        }
+        .bloc{
+            background: $iut;
+        }
+    }
+}
+
+.bloc{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    padding: 10px;
+    width: 170px;
+    height: 200px;
+    border-radius: 5px;
+
+    @media screen and (max-width: 500px) {
+        width: 140px;
+        height: auto;
+        h3{
+            font-size: 1.1em;
+        }
+        p{
+            font-size: 0.9em;
+        }
+    }
+
+    h3{
+        text-align: center;
+        margin: 10px;
+    }
+    p{
+        text-align: center;
+        margin-bottom: 10px;
+        line-clamp: 3;
+    }
+}
+
+.little{
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.hidden{
+    max-height: 0px;
+    padding-top: 0;
+    padding-bottom: 0;
+}

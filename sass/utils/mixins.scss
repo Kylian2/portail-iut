@@ -1,0 +1,43 @@
+@mixin paysage-tablette {
+    @media screen and (min-width: 1024px) {
+        @content
+    }
+}
+
+@mixin ecran-large {
+    @media screen and (min-width: 1439px) {
+        @content
+    }
+}
+
+
+
+@mixin portrait-tablette {
+    @media screen and (min-width: 768px) {
+        @content
+    }
+}
+
+@mixin paysage-mobile {
+    @media screen and (max-width: 736px) {
+        @content
+    }
+}
+
+@mixin paysage-mobile-min{
+    @media screen and (min-width: 736px) {
+        @content
+    }
+}
+
+@mixin portrait-mobile {
+    @media screen and (min-width: 480px) {
+        @content
+    }
+}
+
+@mixin perso($width) {
+    @media screen and (max-width: $width) {
+        @content
+    }
+}
