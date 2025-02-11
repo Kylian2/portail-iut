@@ -1,4 +1,4 @@
-const toggleContainer = (event) => {
+function toggleContainer(event) {
     const element = event.target;
     const toggler = element.closest('.toggler');
     
@@ -18,10 +18,9 @@ const toggleContainer = (event) => {
 };
 
 document.addEventListener("DOMContentLoaded", (event) => { 
-    const container = document.getElementsByClassName('toggler');
+    const container = document.querySelectorAll('.toggler');
 
-    [...container].forEach(element => {
+    container.forEach(element => {
         element.addEventListener('click', toggleContainer);
     });
 })
-
